@@ -1,4 +1,5 @@
 #!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 if [ ! -n "$WERCKER_BASH_TEMPLATE_INPUT" ]; then
   export WERCKER_BASH_TEMPLATE_INPUT="*.template"
 fi
@@ -18,5 +19,5 @@ for input in $WERCKER_BASH_TEMPLATE_INPUT; do
       output=$WERCKER_BASH_TEMPLATE_OUTPUT
   esac
   echo "Templating $input -> $output"
-  ./template.sh < "$input" > "$output"
+  $DIR/template.sh < "$input" > "$output"
 done
