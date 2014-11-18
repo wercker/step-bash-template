@@ -1,4 +1,4 @@
-
+#!/bin/bash
 if [ ! -n "$WERCKER_BASH_TEMPLATE_INPUT" ]; then
   export WERCKER_BASH_TEMPLATE_INPUT="*.template"
 fi
