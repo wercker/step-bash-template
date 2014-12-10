@@ -1,5 +1,5 @@
 #!/bin/bash
-while read line ; do
+while IFS= read line ; do
   while [[ "$line" =~ (\$\{[a-zA-Z_][a-zA-Z_0-9]*\}) ]] ; do
     LHS=${BASH_REMATCH[1]}
     RHS="$(eval echo "\"$LHS\"")"

@@ -1,0 +1,13 @@
+imagine a file named
+
+
+example.template
+Hello ${PWD}
+
+
+after using this step you will have a
+
+example
+Hello /pipeline/source
+
+
