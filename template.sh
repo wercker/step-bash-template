@@ -5,5 +5,5 @@ while IFS= read line ; do
     RHS="$(eval echo "\"$LHS\"")"
     line=${line//$LHS/$RHS}
   done
-  echo $line
+  echo "$line"
 done

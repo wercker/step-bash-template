@@ -1,0 +1,9 @@
+box: wercker/default
+build:
+  steps:
+    - script:
+        name: check output
+        code: |-
+          HOTSTUFF=termie ./template.sh < example.template > example
+          # This should return non-zero if not the same
+          diff -q example.test example
