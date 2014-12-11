@@ -1,13 +1,14 @@
-imagine a file named
-
+Templates files ending in .template using environment variables
 
 example.template
-Hello ${PWD}
+
+  Hello ${PWD}
 
 
 after using this step you will have a
 
 example
-Hello /pipeline/source
+
+  Hello /pipeline/source
 
 
