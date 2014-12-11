@@ -7,3 +7,12 @@ build:
           HOTSTUFF=termie ./template.sh < example.template > example
           # This should return non-zero if not the same
           diff -q example.test example
+    - script:
+        name: auto-version
+        code: export VERSION=$(date +%Y.%j.%k%M)
+    # We have to go deeper
+    - termie/bash-template
+    - script:
+        name: prune
+        code: |-
+          rm example example.template example.test wercker-step.yml.template
