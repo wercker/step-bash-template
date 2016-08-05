@@ -8,7 +8,7 @@ properties:
   input:
     type: string
     required: false
-    default: "*.template"
+    default: ""
   output:
     type: string
     required: false
