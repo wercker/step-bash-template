@@ -1,4 +1,4 @@
-Templates files ending in .template using environment variables
+Templates files containing .template using environment variables
 
 example.template
 
