@@ -13,3 +13,7 @@ properties:
     type: string
     required: false
     default: ""
+  error-on-empty:
+    type: string
+    required: false
+    default: ""
