@@ -1,0 +1,38 @@
+test-alpine:
+  box:
+    id: alpine
+    cmd: /bin/sh
+  steps:
+    - script:
+        name: clear tests
+        code: |
+          rm example
+    - script:
+        name: test.sh
+        code: ./test.sh
+
+test-busybox:
+  box:
+    id: busybox
+    cmd: /bin/sh
+  steps:
+    - script:
+        name: clear tests
+        code: |
+          rm example
+    - script:
+        name: test.sh
+        code: ./test.sh
+
+test-golang:
+  box:
+    id: golang
+    cmd: /bin/bash
+  steps:
+    - script:
+        name: clear tests
+        code: |
+          rm example
+    - script:
+        name: test.sh
+        code: ./test.sh
