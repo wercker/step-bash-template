@@ -11,7 +11,7 @@ build:
         name: auto-version
         code: export VERSION=$(date +%Y.%-j.%-H%M)
     # We have to go deeper
-    - termie/bash-template
+    - bash-template
     - script:
         name: prune
         code: |-
