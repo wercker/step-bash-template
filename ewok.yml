@@ -10,6 +10,19 @@ test-alpine:
     - script:
         name: test.sh
         code: ./test.sh
+    - script:
+        name: clear tests
+        code: |
+          rm example
+          export HOTSTUFF=termie
+    # This requires --enable-dev-steps to be set
+    - bash-template "file://.wercker/projects/step-bash-template"
+    - script:
+        name: check step output
+        code: |
+          diff example.test example
+          [ -z "$(diff example.test example)" ]
+          echo "diffs match"
 
 test-busybox:
   box:
@@ -23,6 +36,21 @@ test-busybox:
     - script:
         name: test.sh
         code: ./test.sh
+    - script:
+        name: clear tests
+        code: |
+          rm example
+          export HOTSTUFF=termie
+    # This requires --enable-dev-steps to be set
+    - bash-template "file://.wercker/projects/step-bash-template"
+    - script:
+        name: check step output
+        code: |
+          diff example.test example
+          [ -z "$(diff example.test example)" ]
+          echo "diffs match"
+
+
 
 test-golang:
   box:
@@ -36,3 +64,16 @@ test-golang:
     - script:
         name: test.sh
         code: ./test.sh
+    - script:
+        name: clear tests
+        code: |
+          rm example
+          export HOTSTUFF=termie
+    # This requires --enable-dev-steps to be set
+    - bash-template "file://.wercker/projects/step-bash-template"
+    - script:
+        name: check step output
+        code: |
+          diff example.test example
+          [ -z "$(diff example.test example)" ]
+          echo "diffs match"
