@@ -1,0 +1,19 @@
+name: bash-template
+version: 2018.0.0
+summary: templates files using environment variables
+tags:
+  - bash
+  - template
+properties:
+- name: input
+  type: string
+  required: false
+  default: ""
+- name: output
+  type: string
+  required: false
+  default: ""
+- name: error-on-empty
+  type: string
+  required: false
+  default: ""

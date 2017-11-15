@@ -1,4 +1,4 @@
-box: wercker/default
+box: debian:stable-slim
 build:
   steps:
     - script:
@@ -15,4 +15,13 @@ build:
     - script:
         name: prune
         code: |-
-          rm example example.template example.test wercker-step.yml.template
+          rm example example.template example.test step.yml.template
+
+publish:
+  steps:
+    - install-packages:
+        packages: ca-certificates
+
+    - publish-step:
+        auth_token: $STEPS_AUTH_TOKEN
+        owner: wercker
